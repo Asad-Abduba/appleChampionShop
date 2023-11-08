@@ -3,13 +3,13 @@
 {% load crispy_forms_tags %}
 {% load crispy_forms_filters %}
 {% block content %}
-	<div class="row d-flex col-6 m-auto">
+	<div class="row d-flex col-4 m-auto">
     <h1 class="text-info text-center">Register here</h1>
         <form action="{% url 'registration-url' %}" method="post">
             {% csrf_token %}
             <field-set>
                 <legend class="border-bottom mb-4">Join today!</legend>
-                {{ form }}
+                {{ form|crispy }}
             </field-set>
             <div class="class-group">
                 <input type="submit" value="Register" class="btn btn-info">
